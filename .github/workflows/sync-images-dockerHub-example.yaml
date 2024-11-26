@@ -30,7 +30,6 @@ jobs:
         region-id: cn-beijing  # 3
         username: "${{ secrets.ACR_USERNAME }}"
         password: "${{ secrets.ACR_PASSWORD }}"
-        logout: false
 
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
