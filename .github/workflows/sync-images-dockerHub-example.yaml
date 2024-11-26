@@ -35,11 +35,10 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://k8s.gcr.io/kube-apiserver:v1.31.3 docker://registry.cn-beijing.aliyuncs.com/kube-apiserver:v1.31.3
-        skopeo copy --all docker://k8s.gcr.io/kube-controller-manager:v1.31.3 docker://registry.cn-beijing.aliyuncs.com/kube-controller-manager:v1.31.3
-        skopeo copy --all docker://k8s.gcr.io/kube-scheduler:v1.31.3 docker://registry.cn-beijing.aliyuncs.com/kube-scheduler:v1.31.3
-        skopeo copy --all docker://k8s.gcr.io/kube-proxy:v1.31.3 docker://registry.cn-beijing.aliyuncs.com/kube-proxy:v1.31.3
-        skopeo copy --all docker://k8s.gcr.io/coredns/coredns:v1.11.3 docker://registry.cn-beijing.aliyuncs.com/coredns:v1.11.3
-        skopeo copy --all docker://k8s.gcr.io/pause:3.10 docker://registry.cn-beijing.aliyuncs.com/pause:3.10
-        skopeo copy --all docker://k8s.gcr.io/etcd:3.5.15-0 docker://registry.cn-beijing.aliyuncs.com/etcd:3.5.15-0
-        
+        skopeo copy --all docker://k8s.gcr.io/kube-apiserver:v1.31.3 docker://registry.cn-beijing.aliyuncs.com/qiyitest/kube-apiserver:v1.31.3
+        skopeo copy --all docker://k8s.gcr.io/kube-controller-manager:v1.31.3 docker://registry.cn-beijing.aliyuncs.com/qiyitest/kube-controller-manager:v1.31.3
+        skopeo copy --all docker://k8s.gcr.io/kube-scheduler:v1.31.3 docker://registry.cn-beijing.aliyuncs.com/qiyitest/kube-scheduler:v1.31.3
+        skopeo copy --all docker://k8s.gcr.io/kube-proxy:v1.31.3 docker://registry.cn-beijing.aliyuncs.com/qiyitest/kube-proxy:v1.31.3
+        skopeo copy --all docker://k8s.gcr.io/coredns/coredns:v1.11.3 docker://registry.cn-beijing.aliyuncs.com/qiyitest/coredns:v1.11.3
+        skopeo copy --all docker://k8s.gcr.io/pause:3.10 docker://registry.cn-beijing.aliyuncs.com/qiyitest/pause:3.10
+        skopeo copy --all docker://k8s.gcr.io/etcd:3.5.15-0 docker://registry.cn-beijing.aliyuncs.com/qiyitest/etcd:3.5.15-0
