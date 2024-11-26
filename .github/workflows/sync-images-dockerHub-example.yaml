@@ -29,6 +29,15 @@ jobs:
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
         logout: false
+
+
+    - name: Login to Aliyun Container Registry (ACR)
+      uses: aliyun/acr-login@v1
+      with:
+        login-server: https://registry.cn-beijing.aliyuncs.com
+        region-id: cn-beijing  # 3
+        username: "${{ secrets.ACR_USERNAME }}"
+        password: "${{ secrets.ACR_PASSWORD }}"
         
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
